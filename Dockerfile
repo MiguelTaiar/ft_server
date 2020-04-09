@@ -4,11 +4,13 @@ RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install wget vim -y
 
 ### instal nginx ###
+
 RUN apt-get install nginx -y
 RUN mkdir -p /var/www/ft_server/html
 RUN rm -f /etc/nginx/sites-enabled/default
 COPY srcs/index.html /var/www/ft_server/html/index.html
 COPY srcs/ft_server /etc/nginx/sites-available/ft_server
+COPY srcs/autoindex.sh /usr/bin/
 RUN ln -s /etc/nginx/sites-available/ft_server /etc/nginx/sites-enabled/ft_server
 
 ### Create a self-signed certificate ###

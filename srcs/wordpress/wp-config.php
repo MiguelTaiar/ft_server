@@ -2,7 +2,7 @@
 
 define('DB_NAME', 'wordpress');
 
-define('DB_USER', 'mtair-s');
+define('DB_USER', 'mtaiar-s');
 
 define('DB_PASSWORD', '1234');
 
